@@ -1,0 +1,14 @@
+module AeroQ
+singleton AeroQTheme 1.0 AeroQTheme.qml
+AeroQHud 1.0 AeroQHud.qml
+AeroQTopBar 1.0 AeroQTopBar.qml
+AeroQPfd 1.0 AeroQPfd.qml
+AeroQHealthPanel 1.0 AeroQHealthPanel.qml
+AeroQTelemetryChart 1.0 AeroQTelemetryChart.qml
+AeroQConnectionDeck 1.0 AeroQConnectionDeck.qml
+AeroQEventConsole 1.0 AeroQEventConsole.qml
+AeroQFlightControls 1.0 AeroQFlightControls.qml
+AeroQFpvOverlay 1.0 AeroQFpvOverlay.qml
+AeroQFleetPanel 1.0 AeroQFleetPanel.qml
+AeroQSosPanel 1.0 AeroQSosPanel.qml
+

@@ -1,0 +1,3 @@
+module QGroundControl.FlyView
+FlightDisplayViewVideo 1.0 FlightDisplayViewVideo.qml
+

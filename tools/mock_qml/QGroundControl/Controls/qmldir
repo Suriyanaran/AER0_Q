@@ -1,0 +1,3 @@
+module QGroundControl.Controls
+ScreenTools 1.0 ../ScreenTools/ScreenTools.qml
+
