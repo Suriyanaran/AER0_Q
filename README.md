@@ -40,22 +40,48 @@
 
 ---
 
-## 🚀 Quick Launch (How to Run)
+## 📥 How to Run After Downloading ZIP from GitHub
 
-### Option A: Desktop Shortcut (One Click)
-Double-click the **`Aero-q-gcs`** shortcut on your Windows Desktop.
+When downloading the source code from GitHub as a ZIP file (`Code -> Download ZIP`), the large 400MB compiled binary folder (`dist/`) is excluded for lightweight repository sizing. 
 
-### Option B: Batch File Launcher
-Navigate to your repository directory:
+You can run the app in **one simple step**:
+
+### ⚡ Method 1: Automatic 1-Click Launcher (Recommended)
+1. **Extract** the downloaded `.zip` file.
+2. Ensure you have **Python 3.10+** installed on your Windows machine ([Download Python](https://www.python.org/downloads/) — *make sure to check "Add Python to PATH"*).
+3. **Double-click `Launch_Aero-q-gcs.bat`** in the extracted folder.
+   - The launcher automatically installs any missing dependencies (`PySide6`, `pymavlink`, `pyserial` from `requirements.txt`).
+   - The application starts up immediately!
+
+---
+
+### 💻 Method 2: Manual Terminal Run
+Open PowerShell or Command Prompt inside the extracted folder:
 ```powershell
-cd "C:\Users\SURYA P\Aero_Q\qgroundcontrol"
-.\Launch_Aero-q-gcs.bat
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Launch the desktop application
+python preview_aeroq_hud.py
 ```
 
-### Option C: Direct Binary Execution
+---
+
+### 🛠️ Method 3: Build Your Own Standalone `.exe`
+If you want to bundle it into a standalone `Aero-q-gcs.exe` executable on your computer:
+* Double-click **`build_standalone_exe.bat`**, OR run:
 ```powershell
-.\dist\Aero-q-gcs\Aero-q-gcs.exe
+pip install -r requirements.txt pyinstaller
+pyinstaller --noconfirm --onedir --windowed --name "Aero-q-gcs" --add-data "src/AeroQ;src/AeroQ" --add-data "tools/mock_qml;tools/mock_qml" preview_aeroq_hud.py
 ```
+Your ready-to-use `.exe` will be generated in `dist\Aero-q-gcs\Aero-q-gcs.exe`.
+
+---
+
+### 🎁 Tip for GitHub Releases (Pre-built Binaries)
+For non-developer users who don't have Python installed:
+* You can ZIP your local `dist\Aero-q-gcs\` folder and upload it under your GitHub repository's **Releases** tab.
+* Anyone can download the release ZIP, extract it, and double-click `Aero-q-gcs.exe` without installing Python or compilers!
 
 ---
 

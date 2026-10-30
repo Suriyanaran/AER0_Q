@@ -1,0 +1,5 @@
+# AERO-Q GCS Dependencies
+PySide6>=6.5.0
+pymavlink>=2.4.30
+pyserial>=3.5
+
